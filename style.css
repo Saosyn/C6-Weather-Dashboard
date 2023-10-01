@@ -5,55 +5,9 @@
     color: aliceblue;
 }
 
-.container {
-    position: fixed;
-    width: 300px;
-    text-align: center;
-    margin-left: 30px;
-    padding: 10px;
-    border-bottom: solid; 
-}
-
-.card-header {
-    letter-spacing: 1px;
-    margin: 0 0 7px 0;
-}
-
 .btn {
     background-color: lightblue;
     margin: 10px;
     width: 250px;
-}
-
-.weath-box {
-    /* margin-left: 400px; */
-    position: relative;
-    border: solid;
-    border-radius: 10px;
-    height: 200px;
-    width: auto;
-    margin: 10px 10px 0 400px;
-}
-
-.city {
-    margin-left: 10px;
-}
-
-.city-history {
-
-}
-
-.btn-city-his {
-    background-color: rgb(104, 100, 100);
-    margin: 10px;
-    width: 250px;
-    position: fixed;
-    margin-left: 50px;
-    color: whitesmoke;
-
-}
-
-.five-day-fore {
-
 }
 

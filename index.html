@@ -13,35 +13,67 @@
     <link href="style.css" rel="stylesheet" />
   </head>
   <body>
-    <header class="header">Weather Dashboard</header>
-    <div class="container">
-      <h3 class="card-header text-uppercase">Search for a City</h3>
-      <form id="city-search" class="card-body">
-        <label class="city-label" form="city">City</label>
-        <input
-          name="username"
-          placeholder="Enter City"
-          id="username"
-          type="text"
-          autofocus="true"
-          class="city-input"
-        />
-        <button type="submit" class="btn">Search</button>
-      </form>
-    </div>
-    <div class="weath-box">
-      <h1 class="city">City</h1>
-      <ul>
-        <li>Temp:</li>
-        <li>Wind:</li>
-        <li>Humidity:</li>
-      </ul>
-    </div>
-    <div class="city-history">
-      <button type="submit" class="btn-city-his">City History</button>
-    </div>
-    <div class="five-day-fore" class="row spacebetween"></div>
+    <!-- header -->
+    <header class="header">
+      <h1 class="p-2 text-light text-center h1">Weather Dashboard</h1>
+    </header>
 
+    <!-- main -->
+    <div class="m-4 p-4">
+      <div class="col-md-12">
+        <div class="row">
+          <!-- search section -->
+          <div class="col-md-3">
+            <!-- search form -->
+            <h5>Search for a City:</h5>
+            <form class="form-inline" id="search-form">
+              <input
+                type="search"
+                class="form-control mb-3 ds-input"
+                id="cityname"
+                placeholder="Enter city name..."
+              />
+              <button type="submit" class="btn">Search</button>
+            </form>
+
+            <!-- search history-->
+            <ul class="list-group" id="search-history"></ul>
+          </div>
+
+          <!-- results section -->
+          <div class="col-md-9">
+            <!-- city weather data -->
+            <div class="card mt-2">
+              <div class="card-body">
+                <div class="d-flex flex-row">
+                  <h2
+                    class="card-title align-self-center"
+                    id="main-city-name"
+                  ></h2>
+                </div>
+                <h6 class="card-subtitle text-muted" id="main-city-temp">
+                  Temperature:
+                </h6>
+                <h6 class="card-subtitle mt-3 text-muted" id="main-city-humid">
+                  Humidity:
+                </h6>
+                <h6 class="card-subtitle mt-3 text-muted" id="main-city-wind">
+                  Wind Speed:
+                </h6>
+              </div>
+            </div>
+
+            <!-- 5-day forecast -->
+            <div>
+              <h2 class="card-title mt-3">5-Day Forecast:</h2>
+              <div class="row justify-content-between" id="five-day">
+                <!-- filled by displayWeather() -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <script
       src="https://code.jquery.com/jquery-3.7.1.js"
       integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
@@ -57,6 +89,7 @@
       integrity="sha256-xLD7nhI62fcsEZK2/v8LsBcb4lG7dgULkuXoXB/j91c="
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
